@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.administrador.GestionInfoPlatilloController">
+   <children>
+      <Label layoutX="70.0" layoutY="166.0" text="Tipo" />
+      <Label layoutX="70.0" layoutY="216.0" text="Disponibilidad" />
+      <TextField fx:id="txtNombrePlatillo" layoutX="164.0" layoutY="113.0" prefHeight="25.0" prefWidth="326.0" />
+      <Label layoutX="70.0" layoutY="117.0" text="Nombre" />
+      <Label layoutX="72.0" layoutY="304.0" text="Precio" />
+      <Label layoutX="72.0" layoutY="348.0" text="Descripción" />
+      <TextArea fx:id="txtDescripcion" layoutX="166.0" layoutY="348.0" prefHeight="157.0" prefWidth="326.0" />
+      <Label fx:id="txtTitulo" layoutX="64.0" layoutY="35.0" prefHeight="32.0" prefWidth="303.0" text="Editar platillo">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="548.0" layoutY="117.0" text="Imagen del platillo" />
+      <Spinner fx:id="spinnerPrecio" editable="true" layoutX="166.0" layoutY="300.0" prefHeight="25.0" prefWidth="63.0" />
+      <ComboBox fx:id="tipoPlatillo" layoutX="164.0" layoutY="162.0" prefHeight="25.0" prefWidth="326.0" />
+      <Label layoutX="284.0" layoutY="304.0" text="Tiempo de preparación" />
+      <Spinner fx:id="spinnerTiempoPrep" editable="true" layoutX="430.0" layoutY="300.0" prefHeight="25.0" prefWidth="62.0" />
+      <RadioButton fx:id="rbuttonDisponible" layoutX="196.0" layoutY="216.0" mnemonicParsing="false" text="Disponible" />
+      <RadioButton fx:id="rbuttonNoDisponible" layoutX="314.0" layoutY="216.0" mnemonicParsing="false" text="No disponible" />
+      <ImageView fx:id="imgPlatillo" fitHeight="277.0" fitWidth="423.0" layoutX="548.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="868.0" layoutY="446.0" mnemonicParsing="false" onAction="#abrirImagen" text="Cambiar imagen" />
+      <HBox alignment="CENTER" layoutX="45.0" layoutY="502.0" prefHeight="73.0" prefWidth="465.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#regresar" text="Regresar" />
+            <Pane prefHeight="73.0" prefWidth="210.0" />
+            <Button fx:id="saveBtn" maxWidth="110.0" minWidth="110.0" mnemonicParsing="false" onAction="#handleSave" prefWidth="110.0" text="Guardar cambios" />
+         </children>
+      </HBox>
+      <Label layoutX="70.0" layoutY="264.0" text="Prioritario" />
+      <RadioButton fx:id="rbuttonPrioritario" layoutX="196.0" layoutY="264.0" mnemonicParsing="false" text="Prioritario" />
+      <RadioButton fx:id="rbuttonNoPrioritario" layoutX="314.0" layoutY="264.0" mnemonicParsing="false" text="No prioritario" />
+      <Label fx:id="lblError" layoutX="68.0" layoutY="76.0" text="Error" textFill="RED" />
+   </children>
+</AnchorPane>

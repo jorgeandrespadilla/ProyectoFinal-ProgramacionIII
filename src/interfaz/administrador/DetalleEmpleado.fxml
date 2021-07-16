@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.administrador.DetalleEmpleadoController">
+   <children>
+      <Button layoutX="83.0" layoutY="528.0" mnemonicParsing="false" onAction="#regresar" text="Regresar" />
+      <Label layoutX="73.0" layoutY="36.0" text="Detalle Empleado">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGuardar" disable="true" layoutX="387.0" layoutY="482.0" mnemonicParsing="false" onAction="#guardarCambios" text="Guardar Cambios" />
+      <VBox layoutX="259.0" layoutY="112.0" prefHeight="200.0" prefWidth="383.0" spacing="20.0">
+         <children>
+            <Label text="Nombre" />
+            <TextField fx:id="txtNombre" prefHeight="25.0" prefWidth="232.0" />
+            <Label text="Apellido" />
+            <TextField fx:id="txtApellido" prefHeight="25.0" prefWidth="232.0" />
+            <Label text="Correo" />
+            <TextField fx:id="txtCorreo" prefHeight="25.0" prefWidth="232.0" />
+            <Label text="Contraseña" />
+            <PasswordField fx:id="txtClave" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

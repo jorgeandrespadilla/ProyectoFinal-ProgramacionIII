@@ -1,0 +1,85 @@
+
+.titulo {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.error-msg {
+    -fx-text-fill: #f83600;
+}
+
+.custom-btn {
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-background-color: #00AAE4;
+    -fx-color: white;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 6 20;
+}
+
+.custom-btn:hover {
+    -fx-opacity: 0.9;
+    -fx-cursor: hand;
+}
+
+.hover-effect:hover {
+    -fx-opacity: 0.9;
+}
+
+.info-nombre-plato {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.dish-btn {
+    -fx-background-color: transparent;
+    -fx-color: white;
+    -fx-padding: 0;
+}
+
+.amount-btn {
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-background-color: #e09346;
+    -fx-color: white;
+    -fx-border-width: 0;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: -1 0 0 0;
+}
+
+.app-btn:pressed {
+    -fx-opacity: 0.9;
+}
+
+.danger {
+    -fx-background-color: #fc4e03;
+}
+
+/*Historial de consumo*/
+
+.items-historial {
+    -fx-border-style: none;
+    -fx-border-width: 0;
+    -fx-border-insets: 0;
+}
+
+.lbl-factura {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.lbl-precio {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0db53a;
+}
+
+.small-btn {
+    -fx-padding: 6 10;
+}

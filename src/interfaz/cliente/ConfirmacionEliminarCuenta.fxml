@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: rgba(51, 51, 51, 0.6);;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.cliente.ConfirmacionEliminarCuentaController">
+   <children>
+      <Pane layoutX="68.0" layoutY="246.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <VBox alignment="CENTER" prefHeight="109.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="74.0" prefWidth="149.0" style="-fx-font-weight: bold;" text="¿Está seguro que quiere eliminar su cuenta?" wrapText="true" VBox.vgrow="ALWAYS" />
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="180.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleDelete" prefHeight="29.0" prefWidth="60.0" text="Sí">
+                           <styleClass>
+                              <String fx:value="custom-btn" />
+                              <String fx:value="danger" />
+                           </styleClass></Button>
+                        <Pane prefHeight="32.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="29.0" prefWidth="61.0" styleClass="custom-btn" text="No" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

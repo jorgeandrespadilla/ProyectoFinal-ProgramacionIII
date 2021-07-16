@@ -1,0 +1,72 @@
+/* 
+    Created on : 15/05/2021, 14:03:29
+    Author     : Jorge Padilla
+*/
+
+.parent {
+    /*-fx-background-color: linear-gradient(to right top, #bebebe, #efefef);*/
+    -fx-background-color: linear-gradient(to bottom right, #fdfcfb 0%, #e2d1c3 100%);
+    -fx-background-color: linear-gradient(to top right, #93a5cf 0%, #d4dfd9 100%);
+}
+
+.logo-image {
+    /*-fx-blend-mode: soft-light;*/
+    -fx-opacity: 0.9;
+}
+
+.error-msg {
+    /*-fx-text-fill: #ff624a;*/
+    -fx-text-fill: #f83600;
+}
+
+.custom-btn {
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-background-color: #0094C6;
+    -fx-color: white;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 6 20;
+}
+
+.custom-btn:hover {
+    -fx-opacity: 0.9;
+    -fx-cursor: hand;
+}
+
+
+
+/*Interfaz GestionOrden*/
+.user-bar {
+    -fx-background-color: #dedede;
+}
+
+.nombre-usuario {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.section-tag {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.num-orden {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.logout-btn {
+    -fx-text-fill: #ededed;
+    -fx-background-color: #D65302;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 6 18;
+}
+
+.logout-btn:hover {
+    -fx-text-fill: #ffffff;
+}

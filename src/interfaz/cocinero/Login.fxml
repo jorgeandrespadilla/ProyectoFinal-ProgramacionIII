@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="370.0" prefWidth="600.0" styleClass="parent" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.cocinero.LoginController">
+    <children>
+        <Button layoutX="463.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleBtnLogin" styleClass="custom-btn" text="Ingresar" />
+        <Label layoutX="314.0" layoutY="192.0" text="Contraseña" />
+        <Label layoutX="314.0" layoutY="120.0" text="Correo electrónico" />
+        <TextField fx:id="campoCorreo" layoutX="314.0" layoutY="150.0" onKeyPressed="#handleFieldKeyEvent" prefHeight="25.0" prefWidth="236.0" promptText="Ingrese su correo" />
+        <PasswordField fx:id="campoClave" layoutX="314.0" layoutY="220.0" onKeyPressed="#handleFieldKeyEvent" prefHeight="25.0" prefWidth="236.0" promptText="Ingrese su contraseña" />
+        <ImageView fitHeight="310.0" fitWidth="227.0" layoutX="44.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" styleClass="logo-image">
+            <image>
+                <Image url="@../../assets/logo.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="314.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Portal Empleados">
+            <font>
+                <Font name="Segoe UI Bold" size="22.0" />
+            </font>
+        </Text>
+      <Label fx:id="errorMsg" layoutX="314.0" layoutY="260.0" styleClass="error-msg" text="Error" />
+    </children>
+</AnchorPane>

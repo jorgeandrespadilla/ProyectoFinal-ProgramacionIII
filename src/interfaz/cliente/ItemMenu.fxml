@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="hijo" centerShape="false" prefHeight="219.0" prefWidth="167.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.cliente.ItemMenuController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="56.0" minWidth="10.0" prefWidth="56.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.19999999999999" minWidth="10.0" prefWidth="74.80003662109374" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="56.0" minWidth="10.0" prefWidth="56.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="51.799993896484374" minHeight="10.0" prefHeight="17.4" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="132.80001525878907" minHeight="10.0" prefHeight="132.80001525878907" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="46.40001220703124" minHeight="10.0" prefHeight="19.199984741210955" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="23.79999389648438" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Text fx:id="titulo" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de platillo" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Text>
+      <Button fx:id="info" mnemonicParsing="false" onAction="#mostrarInfo" prefHeight="105.0" prefWidth="137.0" wrapText="true" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <graphic>
+            <ImageView fx:id="imagen" fitHeight="105.0" fitWidth="134.0" pickOnBounds="true" styleClass="dish-img">
+               <image>
+                  <Image url="@../../assets/logo.png" />
+               </image>
+               <effect>
+                  <DropShadow color="#0000006e" offsetX="2.0" offsetY="2.0" />
+               </effect></ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="dish-btn" />
+            <String fx:value="app-btn" />
+         </styleClass>
+      </Button>
+      <Text fx:id="cantidad" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <Text fx:id="precio" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></Text>
+      <Button fx:id="mas" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#agregarCantidad" prefHeight="30.0" prefWidth="40.0" text="+" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="amount-btn" />
+            <String fx:value="app-btn" />
+         </styleClass>
+      </Button>
+      <Button fx:id="menos" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#quitarCantidad" prefHeight="30.0" prefWidth="40.0" text="-" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="amount-btn" />
+            <String fx:value="app-btn" />
+         </styleClass>
+      </Button>
+   </children>
+</GridPane>
