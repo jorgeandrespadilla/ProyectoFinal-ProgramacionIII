@@ -1,7 +1,7 @@
 # CORe
 ## Cliente - Orden Restaurante
 
-Integrantes: Miguel Brito, Fabian Cruz, José I. Escudero, Alain Ruales, Jorge Padilla
+Integrantes: Miguel Brito, José I. Escudero, Jorge Padilla, Alain Ruales, Christian Samaniego
 
 <img src="src/assets/icons/icon.png" alt="drawing" width="200"/>
 
