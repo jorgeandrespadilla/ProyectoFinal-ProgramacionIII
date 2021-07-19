@@ -73,7 +73,7 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                      <image>
-                        <Image url="assets/icons/user-icon.png" />
+                        <Image url="@../../assets/icons/user-icon.png" />
                      </image>
                   </ImageView>
                   <Label fx:id="nombreCocinero" prefHeight="25.0" prefWidth="256.0" styleClass="nombre-usuario" text="Nombre del cocinero">

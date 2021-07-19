@@ -40,7 +40,7 @@ public abstract class Controller implements Initializable {
     public void checkVisibility() {
         if (!visible) {
             this.visible = true;
-            this.stackManager.getStage().show();
+            this.stackManager.getWindow().show();
         }
     }
 
@@ -67,7 +67,7 @@ public abstract class Controller implements Initializable {
                     break;
                 case HIDE:
                     this.visible = false;
-                    this.stackManager.getStage().hide();
+                    this.stackManager.getWindow().hide();
                     break;
             }
 
@@ -88,17 +88,17 @@ public abstract class Controller implements Initializable {
         });
 
         if (visible) {
-            VisualTools.centerOnParent(stackManager.getStage(), window);
+            VisualTools.centerOnParent(stackManager.getWindow(), window);
         } else {
             VisualTools.centerStage(window);
         }
     }
 
     protected void showMessage(String title, String description) {
-        AlertMessage.infoAlert(title, description, stackManager.getStage());
+        AlertMessage.infoAlert(title, description, stackManager.getWindow());
     }
 
     protected boolean showConfirmation(String title, String description) {
-        return AlertMessage.confirmationAlert(title, description, stackManager.getStage());
+        return AlertMessage.confirmationAlert(title, description, stackManager.getWindow());
     }
 }

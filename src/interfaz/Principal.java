@@ -37,7 +37,7 @@ public class Principal extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Inspector.fxml"));
         Parent screen = (Parent) loader.load();
         InspectorController controller = loader.getController();
-        controller.initData(stage, admin.getStage(), cliente.getStage(), cocinero.getStage());
+        controller.initData(stage, admin.getWindow(), cliente.getWindow(), cocinero.getWindow());
         stage.setScene(new Scene(screen));
         stage.setX(0);
         stage.setY(0);

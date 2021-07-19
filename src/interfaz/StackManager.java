@@ -30,7 +30,7 @@ public class StackManager {
         showStage();
     }
 
-    public Stage getStage() {
+    public Stage getWindow() {
         return this.stage;
     }
 
