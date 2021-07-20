@@ -65,6 +65,7 @@ public class GestionInfoPlatilloController extends Popup {
     }
 
     public void initData() {
+        imgStorage.clearTemp();
         saveBtn.setText("Agregar platillo");
         imgPlatillo.setImage(imgStorage.getMissingImg());
         cargarSpinners(0, 0);
@@ -75,6 +76,7 @@ public class GestionInfoPlatilloController extends Popup {
     }
 
     public void initData(Platillo platillo) {
+        imgStorage.clearTemp();
         saveBtn.setText("Guardar cambios");
         cambio = platillo;
         txtNombrePlatillo.setText(platillo.getNombre());
