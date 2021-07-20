@@ -31,7 +31,6 @@ public class ItemHistorialController extends Controller implements Initializable
     
     @FXML
     public void handleLblFactura(MouseEvent e) {
-//       System.out.println("Factura " + pedido.formatNumPedido());
        InfoConsumoController controlador = stackManager.loadScreen("cliente/InfoConsumo");
        controlador.initData(pedido, stackManager);
     }

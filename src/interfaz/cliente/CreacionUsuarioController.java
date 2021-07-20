@@ -38,7 +38,6 @@ public class CreacionUsuarioController extends Controller implements Initializab
         try {
             verificarCampos();
             Cliente nuevo = new Cliente(nombreTxt.getText(), apellidoTxt.getText(), correoTxt.getText(), Hasher.convert(claveTxt.getText()), cedulaTxt.getText(), direccionTxt.getText());
-
             singleton.agregarUsuario(nuevo);
             stackManager.clearStack();
         } catch (Exception ex) {
