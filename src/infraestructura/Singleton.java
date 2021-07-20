@@ -116,9 +116,9 @@ public class Singleton {
     public void eliminarCuenta(Cliente clienteBuscado) {
         try {
             int cont = 0;
-            for (Cliente cliente : clientes) {
-                if (cliente == clienteBuscado) {
-                    clientes.remove(cont);
+            for (Cliente cliente : this.clientes) {
+                if (clienteBuscado.getCorreo().trim().compareTo(cliente.getCorreo()) == 0) {
+                    this.clientes.remove(cont);
                 }
                 cont++;
             }

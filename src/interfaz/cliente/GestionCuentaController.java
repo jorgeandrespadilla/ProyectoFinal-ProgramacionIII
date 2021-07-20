@@ -79,15 +79,8 @@ public class GestionCuentaController extends Controller {
 
     @FXML
     public void eliminarUsuario(ActionEvent event) throws Exception {
-        List<Cliente> clientes = singleton.getClientes();
-        int cont = 0;
-        for (Cliente cliente : clientes) {
-            if (clienteActual.getCorreo().trim().compareTo(cliente.getCorreo()) == 0) {
-                clientes.remove(cont);
-            }
-            cont++;
-        }
-        stackManager.loadOverlap("cliente/ConfirmacionEliminarCuenta");
+        ConfirmacionEliminarCuentaController controlador = stackManager.loadOverlap("cliente/ConfirmacionEliminarCuenta");
+        controlador.initData(clienteActual);
     }
 
     void initData(Cliente clienteActual) {
