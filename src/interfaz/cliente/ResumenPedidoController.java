@@ -59,8 +59,15 @@ public class ResumenPedidoController extends Controller {
     @FXML
     public void confirmarPedido(ActionEvent a) throws Exception {
         Pedido pedido = new Pedido(clienteActual, platillosSeleccionados, txtAreaObservaciones.getText());//Cambiar por cliente
-        singleton.agregarPedido(pedido);
-        stackManager.goBackToTarget();
+        ConfirmacionEnvioController controlador = stackManager.loadOverlap("cliente/ConfirmacionEnvio");
+        if (singleton.agregarPedido(pedido)) {
+            controlador.initData("Se envió exitosamente su pedido.");
+            stackManager.goBackToTarget();
+        }
+        else {
+            controlador.initData("No se pudo enviar su pedido.");
+        }
+
     }
 
     @Override

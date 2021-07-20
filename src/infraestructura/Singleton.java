@@ -57,16 +57,24 @@ public class Singleton {
         this.clientes.addEnd(cliente);
     }
 
-    public void agregarPedido(Pedido pedido) throws Exception {
+    public boolean agregarPedido(Pedido pedido) throws Exception {
         Cocinero cocinero = null;
         for (Cocinero c : this.cocineros) {
-            if (cocinero == null) {
-                cocinero = c;
-            } else if (c.calcularTiempoPedidos() < cocinero.calcularTiempoPedidos()) {
-                cocinero = c;
+            if(c.isDisponible()) {
+                if (cocinero == null) {
+                    cocinero = c;
+                } else if (c.calcularTiempoPedidos() < cocinero.calcularTiempoPedidos()) {
+                    cocinero = c;
+                }
             }
+            
         }
-        cocinero.agregarPedido(pedido);
+        // Verificar si existe cocienros disponibles
+        if (cocinero != null) {
+            cocinero.agregarPedido(pedido);
+            return true;
+        }
+        return false;
     }
 
     public Cocinero buscarCocinero(String correo) {
@@ -96,7 +104,7 @@ public class Singleton {
         }
         return pedidos;
     }
-    
+
     public int obtenerColaCliente(Cliente cliente) {
         int total = 0;
         for (Cocinero cocinero : cocineros) {
@@ -118,7 +126,7 @@ public class Singleton {
             e.printStackTrace();
         }
     }
-    
+
     public void eliminarEmpleado(String correo) throws Exception {
         for (int i = 0; i < cocineros.size(); i++) {
             if (cocineros.get(i).getCorreo().equals(correo)) {
@@ -134,7 +142,7 @@ public class Singleton {
         }
         return subTotal;
     }
-    
+
     public String formatPrecio(double precio) {
         return String.format("$%.2f", precio);
     }

@@ -8,6 +8,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import utilities.FilterTools;
 import utilities.Hasher;
@@ -30,7 +31,9 @@ public class DetalleEmpleadoController extends Popup {
     private TextField txtClave;
     @FXML
     private Button btnGuardar;
-
+    @FXML
+    private CheckBox checkboxDisponibilidad;
+    
     /**
      * Initializes the controller class.
      */
@@ -43,6 +46,7 @@ public class DetalleEmpleadoController extends Popup {
         txtNombre.setText(cocinero.getNombre());
         txtApellido.setText(cocinero.getApellido());
         txtCorreo.setText(cocinero.getCorreo());
+        checkboxDisponibilidad.setSelected(cocinero.isDisponible());
         agregarListeners();
     }
 
@@ -60,6 +64,7 @@ public class DetalleEmpleadoController extends Popup {
         if (!txtClave.getText().isEmpty()) {
             cocinero.setClave(Hasher.convert(txtClave.getText()));
         }
+        cocinero.setDisponible(checkboxDisponibilidad.isSelected());
         GestionEmpleadosController controlador = (GestionEmpleadosController) this.parent;
         controlador.refrescarTabla();
         showMessage("Crear Empleado", "Empleado actualizado con éxito");
@@ -94,11 +99,4 @@ public class DetalleEmpleadoController extends Popup {
     private void regresar(ActionEvent event) {
         this.close();
     }
-    
-    @FXML
-    public void desactivarEmpleado(ActionEvent event) {
-        
-    }
-   
-
 }
