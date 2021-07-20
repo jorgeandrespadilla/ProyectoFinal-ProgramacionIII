@@ -94,4 +94,11 @@ public class DetalleEmpleadoController extends Popup {
     private void regresar(ActionEvent event) {
         this.close();
     }
+    
+    @FXML
+    public void desactivarEmpleado(ActionEvent event) {
+        
+    }
+   
+
 }
