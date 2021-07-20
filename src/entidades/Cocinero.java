@@ -8,11 +8,21 @@ import estructurasdatos.List;
  */
 public class Cocinero extends Usuario {
 
+    private boolean disponible;
+
     private List<Pedido> pedidos;
 
     public Cocinero(String nombre, String apellido, String correo, String clave) {
         super(nombre, apellido, correo, clave);
         this.pedidos = new List<>();
+    }
+
+    public boolean isDisponible(){
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible){
+        this.disponible = disponible;
     }
 
     public List<Pedido> getPedidos() {
