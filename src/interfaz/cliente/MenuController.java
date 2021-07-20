@@ -10,9 +10,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
@@ -23,7 +21,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import utilities.FilterTools;
 
-public class MenuController extends Controller implements Initializable {
+public class MenuController extends Controller {
 
     private enum Ordenamiento {
         INDEFINIDO,
@@ -33,8 +31,6 @@ public class MenuController extends Controller implements Initializable {
 
     private Cliente clienteActual;
     private List<Platillo> platillosMenu;
-
-    private List<ItemPedido> platillosSeleccionados = new List<>();
     private List<ItemPedido> seleccion = new List<>();
     private List<ItemMenuController> controladoresPlatos = new List<>();
     private Ordenamiento opcionOrdenamiento = Ordenamiento.INDEFINIDO;
@@ -86,7 +82,7 @@ public class MenuController extends Controller implements Initializable {
 
     @FXML
     public void finalizarSeleccion(ActionEvent a) {
-        platillosSeleccionados.clear();
+        List<ItemPedido> platillosSeleccionados = new List<>();
         for (ItemPedido orden : seleccion) {
             if (orden.getCantidad() > 0) {
                 platillosSeleccionados.addStart(orden);
@@ -191,8 +187,6 @@ public class MenuController extends Controller implements Initializable {
     void initData(Cliente clienteActual) {
         this.clienteActual = clienteActual;
         this.platillosMenu = singleton.getMenu().getListaPlatillos();
-
-        platillosSeleccionados = new List<>();
         seleccion = new List<>();
         try {
             actualizarOrden();
