@@ -6,7 +6,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import utilities.FilterTools;
@@ -17,7 +16,7 @@ import utilities.Hasher;
  *
  * @author Mono
  */
-public class AgregarEmpleadoController extends Popup implements Initializable {
+public class AgregarEmpleadoController extends Popup {
 
     @FXML
     private TextField txtNombre;

@@ -1,17 +1,12 @@
 package interfaz.cliente;
 
-import entidades.Cliente;
-import entidades.ItemPedido;
 import entidades.Pedido;
-import estructurasdatos.List;
 import interfaz.Controller;
 import interfaz.StackManager;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
@@ -19,12 +14,9 @@ import javafx.scene.control.TextArea;
  *
  * @author Alain
  */
-public class InfoConsumoController extends Controller implements Initializable {
+public class InfoConsumoController extends Controller {
 
     private Pedido pedido;
-
-    private Cliente clienteActual;
-    private List<ItemPedido> platillosSeleccionados;
 
     @FXML
     private TextArea area;

@@ -27,7 +27,9 @@ import utilities.FilterTools;
  *
  * @author Mono
  */
-public class DetalleClienteController extends Popup implements Initializable {
+public class DetalleClienteController extends Popup {
+
+    private Cliente cliente;
 
     @FXML
     private TextField txtCedula;
@@ -49,7 +51,6 @@ public class DetalleClienteController extends Popup implements Initializable {
     private TableColumn<Pedido, String> colFecha;
     @FXML
     private TableColumn<Pedido, Double> colValorTotal;
-    private Cliente cliente;
 
     /**
      * Initializes the controller class.

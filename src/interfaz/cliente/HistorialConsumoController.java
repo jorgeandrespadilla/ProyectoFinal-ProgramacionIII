@@ -9,7 +9,6 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -20,7 +19,7 @@ import javafx.scene.layout.RowConstraints;
  *
  * @author hp
  */
-public class HistorialConsumoController extends Controller implements Initializable {
+public class HistorialConsumoController extends Controller {
 
     private Cliente clienteActual;
     private List<ItemHistorialController> controladoresPlatos;

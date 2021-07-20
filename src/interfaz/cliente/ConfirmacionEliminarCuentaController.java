@@ -6,14 +6,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 
 /**
  * FXML Controller class
  *
  * @author Jorge Padilla
  */
-public class ConfirmacionEliminarCuentaController extends Controller implements Initializable {
+public class ConfirmacionEliminarCuentaController extends Controller {
 
     private Cliente clienteActual;
     

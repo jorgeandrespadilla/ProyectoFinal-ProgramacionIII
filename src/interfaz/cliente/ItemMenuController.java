@@ -7,7 +7,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
@@ -15,8 +14,9 @@ import javafx.scene.text.Text;
  *
  * @author Alain
  */
-public class ItemMenuController extends Controller implements Initializable{
+public class ItemMenuController extends Controller {
     private ItemPedido relacionado;
+    
     @FXML
     private Text titulo;
     @FXML
@@ -53,20 +53,7 @@ public class ItemMenuController extends Controller implements Initializable{
     @FXML
     public void mostrarInfo(ActionEvent a) {
         InfoPlatilloController controlador = stackManager.loadScreen("cliente/InfoPlatillo");
-        controlador.initData(relacionado.getPlatillo());
-//        try{
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("InfoPlatillo.fxml"));
-//            Parent root = (Parent) loader.load();
-//            InfoPlatilloController controlador = loader.getController();
-//            controlador.cargarInfo(relacionado.getPlatillo());
-//            Scene home_page_scene = new Scene(root);
-//            Stage app_stage = (Stage)((Node) a.getSource()).getScene().getWindow();
-//            app_stage.setScene(home_page_scene); 
-//            app_stage.show();
-//        }catch(IOException e){
-//            System.out.println(e.getMessage());
-//        }
-        
+        controlador.initData(relacionado.getPlatillo());        
     }
     
     @Override
