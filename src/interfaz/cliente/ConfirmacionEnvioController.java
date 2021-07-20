@@ -14,6 +14,8 @@ import javafx.scene.control.Label;
  */
 public class ConfirmacionEnvioController extends Controller {
 
+    private boolean goBackToTarget;
+
     @FXML
     private Label lblMessage;
 
@@ -25,11 +27,17 @@ public class ConfirmacionEnvioController extends Controller {
     }
 
     @FXML
-    private void handleCancel(ActionEvent event) {
-        stackManager.goBack();
+    private void handleCancel(ActionEvent event) throws Exception {
+        if (goBackToTarget) {
+            stackManager.goBackToTarget();
+        }
+        else {
+            stackManager.goBack();
+        }
     }
 
-    public void initData(String message) {
+    public void initData(String message, boolean goBackToTarget) {
         lblMessage.setText(message);
+        this.goBackToTarget = goBackToTarget;
     }
 }

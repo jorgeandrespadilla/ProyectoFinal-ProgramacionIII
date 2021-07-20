@@ -89,10 +89,14 @@ public class DetalleEmpleadoController extends Popup {
         ChangeListener<String> listener = ((observable, oldValue, newValue) -> {
             btnGuardar.setDisable(false);
         });
+        ChangeListener<Boolean> listenerCheck = ((observable, oldValue, newValue) -> {
+            btnGuardar.setDisable(false);
+        });
         txtNombre.textProperty().addListener(listener);
         txtApellido.textProperty().addListener(listener);
         txtCorreo.textProperty().addListener(listener);
         txtClave.textProperty().addListener(listener);
+        checkboxDisponibilidad.selectedProperty().addListener(listenerCheck);
     }
 
     @FXML

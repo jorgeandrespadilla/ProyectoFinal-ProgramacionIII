@@ -14,6 +14,7 @@ public class Cocinero extends Usuario {
 
     public Cocinero(String nombre, String apellido, String correo, String clave) {
         super(nombre, apellido, correo, clave);
+        this.disponible = true;
         this.pedidos = new List<>();
     }
 

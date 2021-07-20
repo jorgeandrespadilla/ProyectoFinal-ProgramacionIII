@@ -61,11 +61,10 @@ public class ResumenPedidoController extends Controller {
         Pedido pedido = new Pedido(clienteActual, platillosSeleccionados, txtAreaObservaciones.getText());//Cambiar por cliente
         ConfirmacionEnvioController controlador = stackManager.loadOverlap("cliente/ConfirmacionEnvio");
         if (singleton.agregarPedido(pedido)) {
-            controlador.initData("Se envió exitosamente su pedido.");
-            stackManager.goBackToTarget();
+            controlador.initData("Se envió exitosamente su pedido.", true);
         }
         else {
-            controlador.initData("No se pudo enviar su pedido.");
+            controlador.initData("No se pudo enviar su pedido.", false);
         }
 
     }
