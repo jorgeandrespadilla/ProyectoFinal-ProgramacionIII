@@ -31,7 +31,7 @@ public class MenuController extends Controller {
 
     private Cliente clienteActual;
     private List<Platillo> platillosMenu;
-    private List<ItemPedido> seleccion = new List<>();
+    private List<ItemPedido> seleccion;
     private List<ItemMenuController> controladoresPlatos = new List<>();
     private Ordenamiento opcionOrdenamiento = Ordenamiento.INDEFINIDO;
 
