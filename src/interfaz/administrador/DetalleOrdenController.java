@@ -11,7 +11,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
@@ -25,7 +24,7 @@ import javafx.scene.image.ImageView;
  *
  * @author Mono
  */
-public class DetalleOrdenController extends Controller implements Initializable {
+public class DetalleOrdenController extends Controller {
 
     @FXML
     private Label lblNumOrden;
@@ -54,9 +53,6 @@ public class DetalleOrdenController extends Controller implements Initializable 
     @FXML
     private Label lblTotal;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         columnaCantidad.setCellValueFactory(new PropertyValueFactory<>("cantidad"));

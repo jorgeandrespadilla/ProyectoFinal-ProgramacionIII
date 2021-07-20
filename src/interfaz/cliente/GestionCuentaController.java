@@ -7,7 +7,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import utilities.FilterTools;
@@ -17,7 +16,7 @@ import utilities.Hasher;
  *
  * @author Alain
  */
-public class GestionCuentaController extends Controller implements Initializable {
+public class GestionCuentaController extends Controller {
 
     private Cliente clienteActual;
 

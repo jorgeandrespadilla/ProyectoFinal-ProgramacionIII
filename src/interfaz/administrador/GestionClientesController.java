@@ -1,7 +1,6 @@
 package interfaz.administrador;
 
 import entidades.Cliente;
-import infraestructura.Singleton;
 import interfaz.Controller;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,7 +10,6 @@ import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
@@ -26,7 +24,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
  *
  * @author Mono
  */
-public class GestionClientesController extends Controller implements Initializable {
+public class GestionClientesController extends Controller {
 
     @FXML
     private TableView<Cliente> tblClientes;

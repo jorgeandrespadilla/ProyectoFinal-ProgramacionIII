@@ -8,7 +8,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -26,7 +25,7 @@ import javafx.scene.image.ImageView;
  *
  * @author hp
  */
-public class GestionInfoPlatilloController extends Popup implements Initializable {
+public class GestionInfoPlatilloController extends Popup {
 
     private Platillo cambio;
 
@@ -120,44 +119,34 @@ public class GestionInfoPlatilloController extends Popup implements Initializabl
 
     private void editarInfo() throws Exception {
         verificarCampos();
-
         cambio.setNombre(txtNombrePlatillo.getText());
         cambio.setDescripcion(txtDescripcion.getText());
-
         cambio.setDisponible(rbuttonDisponible.isSelected());
         cambio.setPrioridad(rbuttonPrioritario.isSelected());
         cambio.setPrecio(spinnerPrecio.getValue());
-
         cambio.setTiempoPreparacion(spinnerTiempoPrep.getValue());
-
         if (imgStorage.hasTemp()) {
             imgStorage.deleteImage(cambio.getUrlImagen());
             cambio.setUrlImagen(imgStorage.saveImage());
         }
-
         if (tipoPlatillo.getSelectionModel().getSelectedItem().toString().compareTo("") != 0) {
             cambio.setTipo(tipoPlatillo.getSelectionModel().getSelectedItem().toString());
         }
-
     }
 
     private void agregarPlatillo() throws Exception {
         verificarCampos();
         Platillo platillo = new Platillo();
-
         platillo.setNombre(txtNombrePlatillo.getText());
         platillo.setTipo(tipoPlatillo.getSelectionModel().getSelectedItem().toString());
         platillo.setDescripcion(txtDescripcion.getText());
         platillo.setDisponible(rbuttonDisponible.isSelected());
         platillo.setPrioridad(rbuttonPrioritario.isSelected());
         platillo.setPrecio(spinnerPrecio.getValue());
-
         platillo.setTiempoPreparacion(spinnerTiempoPrep.getValue());
-
         if (imgStorage.hasTemp()) {
             platillo.setUrlImagen(imgStorage.saveImage());
         }
-
         singleton.getMenu().getListaPlatillos().addEnd(platillo);
     }
 

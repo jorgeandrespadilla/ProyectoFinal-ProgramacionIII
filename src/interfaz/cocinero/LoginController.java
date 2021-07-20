@@ -7,7 +7,6 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
@@ -20,7 +19,7 @@ import utilities.Hasher;
  *
  * @author Jorge Padilla
  */
-public class LoginController extends Controller implements Initializable {
+public class LoginController extends Controller {
 
     private Cocinero cocinero;
 
@@ -31,10 +30,6 @@ public class LoginController extends Controller implements Initializable {
     @FXML
     private PasswordField campoClave;
 
-    
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         errorMsg.setText("");

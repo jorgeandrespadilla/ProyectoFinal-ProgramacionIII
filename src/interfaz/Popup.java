@@ -2,6 +2,7 @@ package interfaz;
 
 import infraestructura.ImgStorage;
 import infraestructura.Singleton;
+import javafx.fxml.Initializable;
 import javafx.stage.Stage;
 import utilities.AlertMessage;
 
@@ -10,7 +11,7 @@ import utilities.AlertMessage;
  * @author Jorge Padilla
  * @param <T>
  */
-public abstract class Popup<T extends Controller> {
+public abstract class Popup<T extends Controller> implements Initializable {
 
     protected final Singleton singleton = Singleton.getInstance();
     protected final ImgStorage imgStorage = ImgStorage.getInstance();

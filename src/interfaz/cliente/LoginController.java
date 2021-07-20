@@ -7,7 +7,6 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import utilities.Hasher;
@@ -16,7 +15,7 @@ import utilities.Hasher;
  *
  * @author Alain
  */
-public class LoginController extends Controller implements Initializable {
+public class LoginController extends Controller {
 
     @FXML
     private TextField correoTxt;

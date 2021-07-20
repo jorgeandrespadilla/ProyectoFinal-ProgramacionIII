@@ -18,7 +18,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableCell;
@@ -37,7 +36,7 @@ import javafx.util.Callback;
  *
  * @author Jorge Padilla
  */
-public class GestionOrdenController extends Popup implements Initializable {
+public class GestionOrdenController extends Popup {
 
     private Cocinero cocinero;
     private Pedido pedidoActual;
@@ -64,9 +63,6 @@ public class GestionOrdenController extends Popup implements Initializable {
     @FXML
     private Label lblOrdenesEnCola;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }
@@ -149,7 +145,6 @@ public class GestionOrdenController extends Popup implements Initializable {
                     ItemPedido item = change.getList().get(0);
                     nombrePlatoLbl.setText(item.getPlatillo().getNombre());
                     imagenPlato.setImage(imgStorage.getImage(item.getPlatillo().getUrlImagen()));
-//                System.out.println("Selection changed: " + change.getList().get(0).getPlatillo().getNombre());   
                 }
             }
         });

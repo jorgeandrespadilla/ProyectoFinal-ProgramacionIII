@@ -7,7 +7,6 @@ import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import utilities.FilterTools;
@@ -18,7 +17,7 @@ import utilities.Hasher;
  *
  * @author Mono
  */
-public class DetalleEmpleadoController extends Popup implements Initializable {
+public class DetalleEmpleadoController extends Popup {
 
     Cocinero cocinero;
     @FXML
